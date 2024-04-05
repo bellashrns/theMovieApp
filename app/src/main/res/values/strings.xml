@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">movieDB</string>
+    <string name="movie_poster">movie_poster</string>
+    <string name="error_msg">End of Data</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="movie_backdrop">movie_backdrop</string>
+    <string name="favorite_button">favoriteButton</string>
+</resources>
