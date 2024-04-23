@@ -3,11 +3,11 @@ package com.bella.week4.ui.movie.popular.adapter
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.bella.week4.ui.movie.model.MovieItem
+import com.bella.week4.domain.model.MovieItem
 
-class PopularMovieListAdapter : PagingDataAdapter<MovieItem, PopularMovieListViewHolder>(COMPARATOR) {
-
-    private var onClickListener: OnClickListener? = null
+class PopularMovieListAdapter(
+    var onClick: ((Int, MovieItem) -> Unit)? = null
+) : PagingDataAdapter<MovieItem, PopularMovieListViewHolder>(COMPARATOR) {
     override fun onBindViewHolder(holder: PopularMovieListViewHolder, position: Int) {
         val movieItem = getItem(position)
         if (movieItem != null) {
@@ -15,22 +15,16 @@ class PopularMovieListAdapter : PagingDataAdapter<MovieItem, PopularMovieListVie
         }
 
         holder.itemView.setOnClickListener {
-            if (movieItem != null) {
-                onClickListener?.onClick(position, movieItem)
+            if (movieItem == null) {
+                return@setOnClickListener
             }
+
+            onClick?.invoke(position, movieItem)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularMovieListViewHolder {
         return PopularMovieListViewHolder.create(parent)
-    }
-
-    fun setOnClickListener(onClickListener: OnClickListener) {
-        this.onClickListener = onClickListener
-    }
-
-    interface OnClickListener {
-        fun onClick(position: Int, movieItem: MovieItem)
     }
 
     companion object {

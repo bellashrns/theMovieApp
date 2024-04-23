@@ -1,4 +1,4 @@
-package com.bella.week4.ui.movie.popular.loadstate
+package com.bella.week4.ui.movie.loadstate
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bella.week4.databinding.LoadStateFooterItemBinding
 import java.io.IOException
 
-class PopularMovieLoadStateViewHolder(private val binding: LoadStateFooterItemBinding) :
+class MovieLoadStateViewHolder(private val binding: LoadStateFooterItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
     fun bind(error: Throwable?) {
@@ -16,13 +16,13 @@ class PopularMovieLoadStateViewHolder(private val binding: LoadStateFooterItemBi
     }
 
     companion object {
-        fun create(parent: ViewGroup, retry: () -> Unit): PopularMovieLoadStateViewHolder {
+        fun create(parent: ViewGroup, retry: () -> Unit): MovieLoadStateViewHolder {
             val binding = LoadStateFooterItemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
             )
-            return PopularMovieLoadStateViewHolder(binding)
+            return MovieLoadStateViewHolder(binding)
         }
     }
 }

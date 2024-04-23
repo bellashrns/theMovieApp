@@ -1,9 +1,5 @@
-package com.bella.week4.ui.movie.model
+package com.bella.week4.domain.model
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
 data class MovieItem(
     val overview: String? = "",
     val originalLanguage: String? = "",
@@ -19,4 +15,4 @@ data class MovieItem(
     val id: Int? = 0,
     val adult: Boolean? = false,
     val voteCount: Int? = 0
-) : Parcelable
+)

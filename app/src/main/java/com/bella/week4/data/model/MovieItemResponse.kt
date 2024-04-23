@@ -1,6 +1,6 @@
 package com.bella.week4.data.model
 
-import com.bella.week4.ui.movie.model.MovieItem
+import com.bella.week4.domain.model.MovieItem
 import com.google.gson.annotations.SerializedName
 
 data class MovieItemResponse(

@@ -4,5 +4,12 @@
     <string name="error_msg">End of Data</string>
     <string name="hello_world">Hello World!</string>
     <string name="movie_backdrop">movie_backdrop</string>
-    <string name="favorite_button">favoriteButton</string>
+    <string name="favourite_button">favouriteButton</string>
+    <string name="unselected">unselected</string>
+    <string name="selected">selected</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_list">List Empty!</string>
+    <string name="deletebtn">deleteBtn</string>
+    <string name="data_is_empty">Data is empty</string>
 </resources>

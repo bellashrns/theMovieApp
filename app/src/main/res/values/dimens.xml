@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="card_elevation">10dp</dimen>
-    <dimen name="card_corner_radius">20dp</dimen>
-    <dimen name="card_max_elevation">12dp</dimen>
+    <dimen name="item_movie_card_elevation">10dp</dimen>
+    <dimen name="item_movie_card_corner_radius">20dp</dimen>
+    <dimen name="item_movie_card_max_elevation">12dp</dimen>
+    <dimen name="image_view_width">200dp</dimen>
+    <dimen name="image_view_height">400dp</dimen>
+    <dimen name="text_view_padding_bottom">8dp</dimen>
+    <dimen name="title_text_size">24sp</dimen>
+    <dimen name="release_date_text_size">16sp</dimen>
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="search_bar_layout_margin">12dp</dimen>
+    <dimen name="search_bar_card_corner_radius">8dp</dimen>
+    <dimen name="search_bar_card_elevation">8dp</dimen>
+    <dimen name="item_movie_title_padding_horizontal">20dp</dimen>
+    <dimen name="item_movie_title_text_size">15sp</dimen>
+    <dimen name="item_movie_layout_height">300dp</dimen>
+    <dimen name="item_query_padding">10dp</dimen>
+    <dimen name="item_query_text_size">20sp</dimen>
+    <dimen name="load_state_padding">30dp</dimen>
 </resources>

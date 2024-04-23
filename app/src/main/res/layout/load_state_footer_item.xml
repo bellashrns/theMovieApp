@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="30dp"
+        android:padding="@dimen/load_state_padding"
         android:text="@string/error_msg"
         android:visibility="gone" />
 

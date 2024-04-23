@@ -1,4 +1,4 @@
-package com.bella.week4.di
+package com.bella.week4.data.di
 
 import com.bella.week4.BuildConfig
 import com.bella.week4.data.network.MovieApi
