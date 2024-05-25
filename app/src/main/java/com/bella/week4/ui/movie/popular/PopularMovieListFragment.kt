@@ -36,7 +36,7 @@ class PopularMovieListFragment : BaseFragment() {
         val recyclerView = binding.recyclerView
 
         recyclerView.adapter = adapter.withLoadStateFooter(
-            footer = MovieLoadStateAdapter { adapter.retry() }
+            footer = MovieLoadStateAdapter()
         )
 
         recyclerView.layoutManager = GridLayoutManager(context, 2).also {
@@ -47,7 +47,7 @@ class PopularMovieListFragment : BaseFragment() {
             }
         }
 
-        adapter.onClick = { position, movie ->
+        adapter.onClick = { _, movie ->
             val bundle = Bundle().apply {
                 putString(MovieDetailActivity.MOVIE_ID, movie.id.toString())
                 putString(MovieDetailActivity.MOVIE_BACKDROP_PATH, movie.backdropPath)

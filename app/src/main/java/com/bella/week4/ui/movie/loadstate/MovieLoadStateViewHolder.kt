@@ -16,7 +16,7 @@ class MovieLoadStateViewHolder(private val binding: LoadStateFooterItemBinding) 
     }
 
     companion object {
-        fun create(parent: ViewGroup, retry: () -> Unit): MovieLoadStateViewHolder {
+        fun create(parent: ViewGroup): MovieLoadStateViewHolder {
             val binding = LoadStateFooterItemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,

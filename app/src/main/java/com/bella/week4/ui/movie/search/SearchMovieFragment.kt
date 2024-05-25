@@ -110,7 +110,7 @@ class SearchMovieFragment : BaseFragment() {
             }
         }
 
-        adapter.onClick = { position, movie ->
+        adapter.onClick = { _, movie ->
             val bundle = Bundle().apply {
                 putString(MovieDetailActivity.MOVIE_ID, movie.id.toString())
                 putString(MovieDetailActivity.MOVIE_BACKDROP_PATH, movie.backdropPath)

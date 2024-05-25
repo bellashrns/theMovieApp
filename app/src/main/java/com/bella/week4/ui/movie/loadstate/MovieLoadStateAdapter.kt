@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 
-class MovieLoadStateAdapter(private val retry: () -> Unit) :
+class MovieLoadStateAdapter :
     LoadStateAdapter<MovieLoadStateViewHolder>() {
     override fun onBindViewHolder(holder: MovieLoadStateViewHolder, loadState: LoadState) {
         if (loadState is LoadState.Error) {
@@ -18,6 +18,6 @@ class MovieLoadStateAdapter(private val retry: () -> Unit) :
         parent: ViewGroup,
         loadState: LoadState
     ): MovieLoadStateViewHolder {
-        return MovieLoadStateViewHolder.create(parent, retry)
+        return MovieLoadStateViewHolder.create(parent)
     }
 }
