@@ -34,8 +34,8 @@ class FavouriteMovieListFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = binding.recyclerView
-        val tvEmpty = binding.tvEmpty
+        val recyclerView = binding.favoriteMoviesRv
+        val tvEmpty = binding.emptyMoviesTv
 
         lifecycleScope.launch {
             viewModel.getFavouriteMovies().observe(viewLifecycleOwner) { movies ->

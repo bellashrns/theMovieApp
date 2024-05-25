@@ -9,7 +9,9 @@ class FavouriteMovieListAdapter(
     var onClick: ((Int, MovieEntity) -> Unit)? = null
 ) : ListAdapter<MovieEntity, FavouriteMovieListViewHolder>(COMPARATOR) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavouriteMovieListViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup, viewType: Int
+    ): FavouriteMovieListViewHolder {
         return FavouriteMovieListViewHolder.create(parent)
     }
 

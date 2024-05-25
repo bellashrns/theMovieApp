@@ -9,6 +9,7 @@ import javax.inject.Inject
 class SearchHistoryUseCaseImpl @Inject constructor(
     private val searchHistoryRepository: SearchHistoryRepository
 ) : SearchHistoryUseCase {
+
     override fun getSearchHistory(): RealmResults<SearchQuery>? {
         var queryList: RealmResults<SearchQuery>? = null
         try {

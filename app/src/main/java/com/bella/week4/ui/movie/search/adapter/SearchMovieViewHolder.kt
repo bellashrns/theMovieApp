@@ -19,13 +19,13 @@ class SearchMovieViewHolder(
     fun bindMovie(item: MovieItem?) {
         Glide.with(binding.root)
             .load(BuildConfig.IMAGE_URL + item?.posterPath)
-            .into((binding as ItemMovieBinding).moviePoster)
+            .into((binding as ItemMovieBinding).moviePosterIv)
 
-        (binding as ItemMovieBinding).movieTitle.text = item?.title
+        (binding as ItemMovieBinding).movieTitleTv.text = item?.title
     }
 
     fun bindQuery(query: SearchQuery?) {
-        (binding as ItemQueryBinding).tvQuery.text = query?.query
+        (binding as ItemQueryBinding).queryItemTv.text = query?.query
     }
 
     companion object {

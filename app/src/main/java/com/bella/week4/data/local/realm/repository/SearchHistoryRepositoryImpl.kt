@@ -11,6 +11,7 @@ import javax.inject.Inject
 class SearchHistoryRepositoryImpl @Inject constructor(
     val realm: Realm
 ) : SearchHistoryRepository {
+
     override fun getSearchHistory(): RealmResults<SearchQuery>? {
         return realm.where(SearchQuery::class.java).findAll()
     }
@@ -27,5 +28,4 @@ class SearchHistoryRepositoryImpl @Inject constructor(
             Timber.tag("SearchHistoryRepositoryImpl").e("insertQuery: %s", e.message)
         }
     }
-
 }

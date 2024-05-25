@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bella.week4.databinding.FragmentPopularMovieListBinding
 import com.bella.week4.ui.core.BaseFragment
 import com.bella.week4.ui.movie.detail.MovieDetailActivity
-import com.bella.week4.ui.movie.popular.adapter.PopularMovieListAdapter
 import com.bella.week4.ui.movie.loadstate.MovieLoadStateAdapter
+import com.bella.week4.ui.movie.popular.adapter.PopularMovieListAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -33,7 +33,7 @@ class PopularMovieListFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = PopularMovieListAdapter()
-        val recyclerView = binding.recyclerView
+        val recyclerView = binding.popularMoviesRv
 
         recyclerView.adapter = adapter.withLoadStateFooter(
             footer = MovieLoadStateAdapter()
@@ -72,5 +72,4 @@ class PopularMovieListFragment : BaseFragment() {
     companion object {
         const val TAG = "Popular"
     }
-
 }

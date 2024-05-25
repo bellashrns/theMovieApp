@@ -11,6 +11,7 @@ import javax.inject.Singleton
 class FavouriteMovieRepositoryImpl @Inject constructor(
     private val movieDao: MovieDao
 ) : FavouriteMovieRepository {
+
     override suspend fun insertFavouriteMovie(movie: MovieEntity) {
         movieDao.insertFavouriteMovie(movie)
     }
@@ -26,5 +27,4 @@ class FavouriteMovieRepositoryImpl @Inject constructor(
     override suspend fun deleteFavouriteMovie(movie: MovieEntity) {
         movieDao.deleteFavouriteMovie(movie)
     }
-
 }

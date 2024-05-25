@@ -11,7 +11,7 @@ class MovieLoadStateViewHolder(private val binding: LoadStateFooterItemBinding) 
     RecyclerView.ViewHolder(binding.root) {
 
     fun bind(error: Throwable?) {
-        binding.errorMsg.isVisible =
+        binding.errorMsgTv.isVisible =
             error is IOException
     }
 

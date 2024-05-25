@@ -8,6 +8,7 @@ import com.bella.week4.domain.model.MovieItem
 class PopularMovieListAdapter(
     var onClick: ((Int, MovieItem) -> Unit)? = null
 ) : PagingDataAdapter<MovieItem, PopularMovieListViewHolder>(COMPARATOR) {
+
     override fun onBindViewHolder(holder: PopularMovieListViewHolder, position: Int) {
         val movieItem = getItem(position)
         if (movieItem != null) {

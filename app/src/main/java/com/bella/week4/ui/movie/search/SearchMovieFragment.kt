@@ -41,8 +41,8 @@ class SearchMovieFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = binding.recyclerView
-        val tvEmpty = binding.tvEmpty
+        val recyclerView = binding.searchRv
+        val tvEmpty = binding.emptySearchTv
 
         lifecycleScope.launch {
             viewModel.movies.observe(viewLifecycleOwner) {

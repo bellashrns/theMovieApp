@@ -10,6 +10,7 @@ import dagger.hilt.components.SingletonComponent
 @Module(includes = [RealmModule::class])
 @InstallIn(SingletonComponent::class)
 abstract class RealmRepositoryModule {
+
     @Binds
     abstract fun provideSearchHistoryRepository(
         realmRepositoryImpl: SearchHistoryRepositoryImpl

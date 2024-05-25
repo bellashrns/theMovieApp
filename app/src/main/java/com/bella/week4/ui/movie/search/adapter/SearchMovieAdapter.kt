@@ -9,8 +9,7 @@ import com.bella.week4.data.local.realm.model.SearchQuery
 import com.bella.week4.domain.model.MovieItem
 
 class SearchMovieAdapter(
-    private val isQuery: LiveData<Boolean>,
-    var onClick: ((Int, MovieItem) -> Unit)? = null
+    private val isQuery: LiveData<Boolean>, var onClick: ((Int, MovieItem) -> Unit)? = null
 ) : RecyclerView.Adapter<SearchMovieViewHolder>() {
 
     private var movieList: List<MovieItem> = listOf()

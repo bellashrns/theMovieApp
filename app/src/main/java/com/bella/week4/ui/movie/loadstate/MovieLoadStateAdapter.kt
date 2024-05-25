@@ -6,6 +6,7 @@ import androidx.paging.LoadStateAdapter
 
 class MovieLoadStateAdapter :
     LoadStateAdapter<MovieLoadStateViewHolder>() {
+
     override fun onBindViewHolder(holder: MovieLoadStateViewHolder, loadState: LoadState) {
         if (loadState is LoadState.Error) {
             holder.bind(loadState.error)

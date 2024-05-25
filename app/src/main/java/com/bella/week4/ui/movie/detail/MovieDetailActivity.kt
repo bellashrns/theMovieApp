@@ -39,7 +39,7 @@ class MovieDetailActivity : BaseActivity() {
 
         viewModel.checkIsFavourite(currentId)
 
-        binding.favouriteButton.setOnClickListener {
+        binding.favouriteBtn.setOnClickListener {
             viewModel.toggleFavourite(currentMovie)
         }
 
@@ -63,7 +63,7 @@ class MovieDetailActivity : BaseActivity() {
     }
 
     private fun updateUI(isFavourite: Boolean) {
-        binding.favouriteButton.setImageResource(
+        binding.favouriteBtn.setImageResource(
             if (isFavourite) R.drawable.ic_favorite else R.drawable.ic_unfavorite
         )
     }

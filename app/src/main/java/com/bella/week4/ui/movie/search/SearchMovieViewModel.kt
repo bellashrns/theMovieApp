@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.bella.week4.data.local.realm.model.SearchQuery
 import com.bella.week4.data.model.MovieItemResponse
 import com.bella.week4.data.network.repository.MovieNetworkRepository
-import com.bella.week4.ui.core.BaseViewModel
 import com.bella.week4.domain.model.MovieItem
 import com.bella.week4.domain.usecase.searchHistory.SearchHistoryUseCase
+import com.bella.week4.ui.core.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -10,15 +10,14 @@ import com.bumptech.glide.Glide
 
 class PopularMovieListViewHolder(
     private val binding: ItemMovieBinding
-) :
-    RecyclerView.ViewHolder(binding.root) {
+) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: MovieItem?) {
         Glide.with(binding.root)
             .load(BuildConfig.IMAGE_URL + item?.posterPath)
-            .into(binding.moviePoster)
+            .into(binding.moviePosterIv)
 
-        binding.movieTitle.text = item?.title
+        binding.movieTitleTv.text = item?.title
     }
 
     companion object {

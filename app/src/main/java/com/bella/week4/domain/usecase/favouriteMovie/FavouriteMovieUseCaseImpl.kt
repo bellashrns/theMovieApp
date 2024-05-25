@@ -8,6 +8,7 @@ import javax.inject.Inject
 class FavouriteMovieUseCaseImpl @Inject constructor(
     private val repository: FavouriteMovieRepository
 ) : FavouriteMovieUseCase {
+
     override suspend fun insertFavouriteMovie(movie: MovieEntity) {
         repository.insertFavouriteMovie(movie)
     }

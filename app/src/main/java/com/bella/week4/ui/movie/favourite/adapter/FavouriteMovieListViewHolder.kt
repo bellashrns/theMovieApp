@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bella.week4.BuildConfig
-import com.bella.week4.databinding.ItemMovieBinding
 import com.bella.week4.data.local.room.entity.MovieEntity
+import com.bella.week4.databinding.ItemMovieBinding
 import com.bumptech.glide.Glide
 
 class FavouriteMovieListViewHolder(
@@ -15,9 +15,9 @@ class FavouriteMovieListViewHolder(
     fun bind(item: MovieEntity?) {
         Glide.with(binding.root)
             .load(BuildConfig.IMAGE_URL + item?.posterPath)
-            .into(binding.moviePoster)
+            .into(binding.moviePosterIv)
 
-        binding.movieTitle.text = item?.title
+        binding.movieTitleTv.text = item?.title
     }
 
     companion object {

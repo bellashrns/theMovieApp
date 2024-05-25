@@ -10,6 +10,7 @@ import dagger.hilt.components.SingletonComponent
 @Module(includes = [RoomModule::class])
 @InstallIn(SingletonComponent::class)
 abstract class RoomRepositoryModule {
+
     @Binds
     abstract fun provideFavouriteMovieRepository(
         roomRepositoryImpl: FavouriteMovieRepositoryImpl

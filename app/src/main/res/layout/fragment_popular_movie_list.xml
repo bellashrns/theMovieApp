@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_popular_movie_list"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     tools:context=".ui.movie.popular.PopularMovieListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/popular_movies_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
