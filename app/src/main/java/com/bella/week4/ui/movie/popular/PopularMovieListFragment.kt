@@ -21,6 +21,8 @@ class PopularMovieListFragment : BaseFragment() {
     private lateinit var binding: FragmentPopularMovieListBinding
     override val viewModel: PopularMovieListViewModel by viewModels()
 
+    private val adapter: PopularMovieListAdapter by lazy { PopularMovieListAdapter() }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,7 +34,12 @@ class PopularMovieListFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = PopularMovieListAdapter()
+        lifecycleScope.launch {
+            viewModel.movies.collectLatest {
+                adapter.submitData(lifecycle, it)
+            }
+        }
+
         val recyclerView = binding.popularMoviesRv
 
         recyclerView.adapter = adapter.withLoadStateFooter(
@@ -60,12 +67,6 @@ class PopularMovieListFragment : BaseFragment() {
             val intent = Intent(requireContext(), MovieDetailActivity::class.java)
             intent.putExtra(MovieDetailActivity.MOVIE_BUNDLE, bundle)
             startActivity(intent)
-        }
-
-        lifecycleScope.launch {
-            viewModel.movies.collectLatest {
-                adapter.submitData(lifecycle, it)
-            }
         }
     }
 

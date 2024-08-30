@@ -24,7 +24,8 @@ class SearchMovieAdapter(
 
     override fun onBindViewHolder(holder: SearchMovieViewHolder, position: Int) {
         if (queryList.isEmpty() && movieList.isEmpty()) {
-            Toast.makeText(holder.itemView.context, R.string.data_is_empty, Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, R.string.data_is_empty, Toast.LENGTH_SHORT)
+                .show()
             return
         }
 

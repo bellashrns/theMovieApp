@@ -43,6 +43,11 @@ class MovieDetailActivity : BaseActivity() {
             viewModel.toggleFavourite(currentMovie)
         }
 
+        viewModel.isFavourite.observe(this) {
+            viewModel.checkIsFavourite(currentId)
+            updateUI(it)
+        }
+
         binding.apply {
             Glide.with(root)
                 .load(BuildConfig.IMAGE_URL + movieBackdropPath)
@@ -54,11 +59,6 @@ class MovieDetailActivity : BaseActivity() {
 
         binding.toolbar.setOnClickListener {
             finish()
-        }
-
-        viewModel.isFavourite.observe(this) {
-            viewModel.checkIsFavourite(currentId)
-            updateUI(it)
         }
     }
 
